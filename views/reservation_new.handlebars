@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login In</title>
+    <link rel="stylesheet" href="/public/stylesheets/formPage.css">
+    
+
+</head>
+<body>
+<h1 style="margin-left: 150px;">{{title}}</h1>
+
+<div id="error" class ="error" hidden></div>
+<div id = "closebtnId" class="closebtn" hidden> &times;</div>
+{{#if hasErrors}}
+    <p id = "error_alert" class="error">{{error}}</p>
+     <div id = "closebtnId1" class="closebtn"> &times;</div>
+{{/if}}
+<br>
+{{!-- form for specific doctors --}}
+<div class="card">
+    <div class="container" style="padding:16px">
+<form id ="reservationForm" action="/reservation/new/{{docsList._id}}" method="POST" >
+
+
+   <table style="margin-left: 100px;">
+    
+      <tr>
+            <td><label for="docName">Doctor's Name:</label></td>
+            <td><input style="background-color: darkgray;" value="{{docsList.name}}" type="text" name="docName" id="docName" readonly></td>
+        </tr>
+        <tr>
+            <td><label for="specs">Specialization:</label></td>
+            <td><input  style="background-color: darkgray;" value="{{docsList.specialization}}" type="text" name="specs" id="specs" readonly></td>
+        </tr>
+        <tr>
+            <td><label for="fname">Patient's Name:</label></td>
+            <td><input style="background-color: darkgray;" value="{{user.userName}}"   type="text" name="fname" id="fname" readonly></td>
+        </tr>
+        <tr>
+          <td><label for="lname">Patient's Email:</label></td>
+            <td><input style="background-color: darkgray;" value="{{user.email}}" type="text" name="lname" id="lname" readonly></td>
+        </tr>
+        
+        <tr>
+          <td><label for="lname">Select Hospital:</label></td>
+         
+            <td><select name="hospitals" id="hosplist" required>
+        
+                {{#ifNotEquals hospital null}}
+                       <option value="{{hospital._id}}">{{hospital.name}}</option>
+                  {{else}}
+                      <option value="">Select</option>
+                    {{#each HospitalList}}
+                    <option value="{{this._id}}">{{this.name}}</option>
+                     {{/each}}
+                   {{/ifNotEquals}}
+              </select></td>
+        </tr>
+        <tr>
+          <td><label for="resvDate">Date:</label></td>
+            <td><input type="date" name="app_date" id="resvDate" value="" required></td>
+        </tr>
+        <tr>
+          <td></td>
+            <td><button type="submit" class="button1">Schedule</button></td>
+        </tr>
+    </table>
+    <br>
+    </form>
+    </div></div>
+
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src='/public/scripts/script_reservation_new.js'></script>
+    <script>DateRestrict();</script>
+    {{!-- <script>DateRestrict();</script> --}}
+    
+
+</body>
+
+
+
+</html>

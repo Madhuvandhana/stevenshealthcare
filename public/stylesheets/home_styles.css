@@ -1,0 +1,463 @@
+* {box-sizing: border-box;}
+
+
+/* header */
+.header {
+    overflow: hidden;
+    background-color: #BFEFFF;
+    padding: 20px 10px;
+  }
+  
+  .header a {
+    float: left;
+   color: #296097;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 21px; 
+    font-family: graduate;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  .header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .header a:hover {
+    background-color: #B9D3EE;
+  }
+  
+  
+  .header-right {
+    float: right;
+  }
+
+/*============================================
+* Hero Area
+*=============================================*/
+
+.hero-area {
+    padding: 140px 0 211px;
+    background: url(../home_images/hero-bg.jpg) center/cover no-repeat;
+}
+
+.hero-content h2 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #222222;
+    letter-spacing: 0;
+    line-height: 66px;
+    margin-bottom: 17px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #878787;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+
+.hero-content a {
+    margin-top: 35px;
+    display: inline-block;
+    height: 60px;
+    background: #2c76e2;
+    line-height: 60px;
+    letter-spacing: 0;
+    color: #fff;
+    padding: 0 35px;
+    border-radius: 60px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/*============================================
+* END Hero Area
+*=============================================*/
+
+/*============================================
+* help-center-area start
+*=============================================*/
+/* .intermediate-region {
+    background-color: white;
+    padding: 100px;
+} */
+
+.help-center-area {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 100px;
+    padding-top: 50px;
+}
+
+.hlp-center-thumb {
+    margin-right: 30px;
+    border-radius: 9px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.hlp-center-content>h4 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #222222;
+    line-height: 51px;
+    margin-bottom: 20px;
+    letter-spacing: 0;
+}
+
+.hlp-center-content p {
+    font-size: 16px;
+    color: #878787;
+    letter-spacing: 0;
+}
+
+.help-feature-lists {
+    margin-top: 32px;
+}
+
+.help-feature-lists li {
+    overflow: hidden;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.help-feature-lists li .icon {
+    float: left;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: #0bc1bb;
+    margin-right: 30px;
+    text-align: center;
+    line-height: 68px;
+    padding: 0 17px;
+}
+
+.help-feature-lists li:nth-child(2) .icon {
+    background: #2c76e2;
+}
+
+.help-feature-lists li:nth-child(3) .icon {
+    background: #fe94c4;
+}
+
+.help-feature-lists li .content {
+    overflow: hidden;
+}
+
+.help-feature-lists li .content h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222222;
+    letter-spacing: 0;
+    margin-bottom: 7px;
+}
+
+.help-feature-lists li .content p {
+    font-size: 16px;
+    color: #878787;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+/*============================================
+* END help-center-area
+*=============================================*/
+
+/*============================================
+* service-area
+*=============================================*/
+
+.service-area {
+    padding: 100px 0 55px;
+    position: relative;
+    z-index: 1;
+}
+
+.shape2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    letter-spacing: 0;
+    color: #222222;
+    font-weight: 700;
+    line-height: 43px;
+    margin-bottom: 14px;
+}
+
+.single-service {
+    margin-bottom: 45px;
+}
+
+.single-service .icon {
+    height: 72px;
+    margin-bottom: 20px;
+}
+
+.single-service .content h2 {
+    font-size: 22px;
+    color: #222222;
+    letter-spacing: 0;
+    font-weight: 700;
+    margin-bottom: 19px;
+}
+
+.single-service .content p {
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.single-service .content a:hover {
+    color: #1160d4;
+}
+
+.single-service .content a:hover i {
+    margin-left: 5px;
+}
+
+/*============================================
+* END service-area
+*=============================================*/
+
+/*============================================
+* doctors-carousel
+*=============================================*/
+
+.mt-doctor {
+    position: relative;
+    z-index: 1;
+}
+
+.mt-doctor .content {
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    padding: 25px;
+    width: 100%;
+    opacity: 0;
+}
+
+.mt-doctor:hover .content {
+    opacity: 1;
+    bottom: 0;
+}
+
+.doctors-carousel .owl-dots {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.doctors-carousel .owl-dots {
+    margin-top: 30px;
+}
+/* :horizontal */
+/* #wrap {
+    display: flex;
+    justify-content: center;
+} */
+/*============================================
+* END doctors-carousel
+*=============================================*/
+
+/*============================================
+* book-appointment
+*=============================================*/
+
+.appointment-inner {
+    position: relative;
+    z-index: 1;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    background: url(../home_images/appointment-bg.jpg) center/cover no-repeat;
+}
+
+.appointment-inner .vector-shape2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    max-width: 100%;
+}
+
+.appnt-form {
+    margin-right: 60px;
+    margin-bottom: -50px;
+    background: #fff;
+    padding: 40px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
+}
+
+.appnt-form h4 {
+    font-size: 37px;
+    font-weight: 700;
+    color: #222222;
+    letter-spacing: 0;
+    line-height: 47px;
+    margin-bottom: 28px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control,
+select.form-control:not([size]):not([multiple]) {
+    height: 50px;
+    border: 1px solid #ebebeb;
+    padding-left: 15px;
+    letter-spacing: 0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.form-control:focus,
+select.form-control:not([size]):not([multiple]):focus {
+    border-color: #2c76e2;
+    box-shadow: none;
+}
+
+textarea.form-control {
+    height: 95px;
+    padding-top: 12px;
+}
+
+.btn {
+    height: 50px;
+    line-height: 48px;
+    font-size: 14px;
+    letter-spacing: 0;
+    padding: 0 15px;
+}
+
+.btn-lg {
+    height: 60px;
+    line-height: 60px;
+}
+
+.btn-primary {
+    background: #2c76e2;
+}
+
+.btn-secondary {
+    background: #2ea6f7;
+    border-color: #2ea6f7;
+}
+
+.btn-secondary:hover {
+    background: #0987dc;
+    border-color: #0987dc;
+}
+
+.btn-secondary.focus,
+.btn-secondary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(46, 166, 247, 0.26);
+}
+
+.btn-liedark {
+    background: #23408e;
+    color: #fff;
+}
+
+.btn-liedark:hover {
+    background: #2f54b7;
+    border-color: #2f54b7;
+    color: #fff;
+}
+
+.btn-liedark.focus,
+.btn-liedark:focus {
+    box-shadow: 0 0 0 0.2rem rgba(46, 166, 247, 0.26);
+}
+
+.btn-radius {
+    border-radius: 50px;
+}
+
+/*============================================
+* END book-appointment
+*=============================================*/
+
+/*============================================
+* footer-top
+*=============================================*/
+
+.footer-top {
+    background: #5fc8ee;
+}
+
+.fwidget {
+    margin-bottom: 40px;
+}
+
+.fwidget-company {
+    padding-right: 50px;
+}
+
+.flogo {
+    margin-bottom: 40px;
+}
+
+.flogo a {
+    display: inline-block;
+}
+
+.fwidget-company p {
+    font-size: 16px;
+    color: #878787;
+}
+
+.fwidget-title {
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin-bottom: 23px;
+}
+
+.fwidget .links li {
+    display: block;
+}
+
+.fwidget .links li a {
+    display: block;
+    font-size: 14px;
+    color: #ffffff;
+    letter-spacing: 0;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+.fwidget .links li a:hover {
+    color: #2c76e2;
+}
+
+.footer-bottom-area {
+    padding: 30px 0;
+    background: #142949;
+}
+
+.copyright {
+    color: #8e8d8e;
+    font-size: 14px;
+}
+
+.ft-bottom-sc {
+    text-align: right;
+}
+
+/*============================================
+* END footer-top
+*=============================================*/

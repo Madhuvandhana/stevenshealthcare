@@ -1,0 +1,50 @@
+<main>
+
+  <br/> 
+
+  <div class="container" style="padding:16px">
+    <h1 style="margin-left:138px;">{{title}}</h1>
+  </div>
+
+
+  {{#each reservationList}}
+  <a href="/reservation/get/{{this._id}}" class="card_link">
+  <div class="card">
+    <div class="container" style="padding:16px">
+    
+    <table style="color:darkslategray">
+      <tr>
+        <td style="width: 30%"><b>Booking ID:</b></td>
+        <td><b>#{{this._id}}</b></td>
+      </tr>
+      <tr>
+        <td>Doctor:</td>
+        <td>{{this.doctor.name}}</td>
+      </tr>
+      <tr>
+        <td>Date:</td>
+        <td>{{this.date_formatted}}</td>
+      </tr>
+      <tr>
+        <td>Hospital:</td>
+        <td><span class="status-{{this.status}}">{{this.hospital.name}}</span></td>
+      </tr>
+      <tr>
+        <td>Status:</td>
+        <td style="background-color:lightgreen"> {{this.status}}</td>
+      </tr>
+      
+    </table>
+    
+    </div>
+  </div>
+  </a>
+  {{/each}}
+
+  {{#unless reservationList}}
+    <div class="card">
+      <p>No records found</p>
+    </div>
+  {{/unless}}
+
+</main>

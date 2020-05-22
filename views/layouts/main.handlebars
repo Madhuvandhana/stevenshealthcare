@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>My Site</title>
+     <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <link rel="stylesheet" href="/public/stylesheets/formPage.css">
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="public/scripts/medi-client.js"></script>
+    <script src='/public/scripts/script_reservation_new.js'></script>
+   <script src='/public/scripts/script_login.js'></script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v1.0&appId=529343854405343&autoLogAppEvents=1"></script>
+      {{#if user}}
+    <div class="header">
+  <img src="/public/images/logo" alt=" " height="62" width="130">
+  <div class="header-right">
+    <a href="/reservation" class="button1 btn_dash button">Appointments</a>
+    <a class="button1 btn_dash button" href="/doctors">List of Doctors</a> 
+      <a href="/logout" onclick="logout(this);" class="button1 btn_logout button">Logout</a>
+</div>
+</div>
+    {{/if}}
+    <main>
+        {{{body}}}
+    </main>
+</body>
+</html>

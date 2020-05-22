@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Doctors</title>
+    <link rel="stylesheet" href="/public/stylesheets/formPage.css">
+    
+
+</head>
+<body>
+  <h1 style="margin-left: 150px;">User Information</h1>
+<main>
+  <div style="margin-left: 150px;">
+    Welcome {{data.userName}} !
+  </div><br><br>
+  <div style="margin-left: 150px;">Your Information<br><br><br></div>
+  <div class="card">
+    <div class="container" style="padding:16px">
+  <table>
+    <tr>
+      <td>Email:</td>
+      <td>{{data.email}}</td>
+    </tr>
+    <tr>
+      <td>Mobile Number:</td>
+      <td>{{data.mobileNumber}}</td>
+    </tr>
+    <tr>
+      <td>Address:</td>
+      <td>{{data.address}}</td>
+    </tr>
+    <tr>
+      <td>DOB:</td>
+      <td>{{data.dob}}</td>
+    </tr>
+  </table><br>
+  </div>
+  </div><br><br>
+  <div style="margin-left: 138px"><a style="font-size: large;" href="/doctors">GoTo The List of Doctors</a></div>
+  </main>
+</body>
+</html> 

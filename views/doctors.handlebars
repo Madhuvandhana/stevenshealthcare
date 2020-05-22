@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Doctors</title>
+    <link rel="stylesheet" href="/public/stylesheets/formPage.css">
+        <link rel="stylesheet" href="/public/stylesheets/home.css">
+    
+
+</head>
+<body onload="populateHospitalSearch('{{ json hospitalList}}', '{{ json docSearchList}}')">
+     {{#ifEquals user null}}
+    <div class="header">
+  <img src="/public/images/logo"  height="62" width="130" alt=" ">
+    <div class="header-right">
+<div class="fb-login-button" data-size="large" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="true" data-width="" data-onlogin="checkLoginState();"></div>
+    </div>
+    </div>
+      {{/ifEquals}}
+    <form autocomplete="off" action="/search" id ="searchContainer">
+  <div class="autocomplete" style="width:300px;">
+    <label for="hospitalSearch"></label>  
+    <input id="hospitalSearch" type="text" name="hospital" placeholder="Search By Hospital/Doctor" value="{{searchValue}}">
+  </div>
+    <input id="hospitalID" type="text" name="id">
+  <input id="search" type="submit" value="Search">
+</form>
+  <h1  style="margin-left: 150px;">Doctor's Information</h1>
+<main>
+
+  <div style="margin-left: 150px;">  
+    Welcome {{user.userName}} ! Below are list of doctors.
+
+
+  </div>
+  <br>
+   <br>
+   {{#if docsList}}
+   {{#each docsList}}
+   <div class="card">
+    <div class="container" style="padding:16px">
+   <form id ="docsForm" action="/reservation/new/{{this._id}}/{{../hospital}}" method="GET">
+   <table style=" margin-left: 100px;">
+        <tr>
+            <td><img src="public/images/docimage2.jpg" alt="doc1" width="100" height="138"></td>
+            <td>{{this.name}}<br><br>Gender: {{this.gender}}<br><br>Specialism: {{this.specialization}}<br><br>
+            <input style="width: 200px" type="submit" value="Book Appointment" onclick="reservation_new"></td>
+        </tr>
+    </table>
+    <br>
+    </form>
+    </div> </div>
+    <br>
+    {{/each}}
+    {{else}}
+    <div style="margin-left: 350px;">Data Not Available. Please try some other doctor or hospital</div>
+   {{/if}}
+  </main>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+      crossorigin="anonymous"></script>
+      <script src='/public/scripts/script_search.js'></script>
+</body>
+</html> 

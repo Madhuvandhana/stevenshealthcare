@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    
+
+</head>
+<body>
+  <h1>Main page!</h1>
+<main>
+{{#if hasErrors}}
+    <p class="error">{{error}}</p>
+   {{else}} 
+        <p> Welcome {{data.username}}</p>
+ {{/if}}
+
+  </main>
+</body>
+</html>
